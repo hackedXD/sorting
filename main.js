@@ -178,7 +178,7 @@ async function mergeSort(low = 0, high = arr.length - 1) {
 		let updateAndPlay = async (updatedObj, index) => {
 			arr[index] = updatedObj;
 			arr[index].color = RED_COLOR;
-			playNote(((1.5 * arr[index].value) / arr.length) * (FREQ_MAX - FREQ_MIN) + FREQ_MIN, NOTE_DURATION);
+			playNote(((2 * arr[index].value) / arr.length) * (FREQ_MAX - FREQ_MIN) + FREQ_MIN, NOTE_DURATION);
 
 			await sleep(SORT_DELAY / arr.length);
 
